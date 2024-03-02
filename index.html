@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AbdulRehman Khan</title>
+    <link rel="stylesheet" href="assets/css/newstyle.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+</head>
+<body>
+    <section class="banner">
+        <header>
+            <a href="/index.html" class="logo"><span>AbdulRehman</span> Khan</a>
+            <ul>
+                <li><a class="nav-link scrollto active" href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/resume.html">Resume</a></li>
+                <li><a href="/portfolio.html">Portfolio</a></li>
+                <li><a href="/services.html">Services</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <h3>Hey,</h3>
+            <h2>I am <span id="text">AbdulRehman</span></h2>
+            <p>Solution-oriented computer engineer with 6+ experience in development & management. Seeking to expand career in artificial Intelligence, banking, cybersecurity & cloud computing at a respected organization as a consultant.</p>
+            <a href="mailto:a13khan@torontomu.ca">
+                <button>Hire ME</button>
+            </a>
+            <a href="mailto:a13khan@torontomu.ca">
+                <button class="chat"><ion-icon name="chatbubbles-outline"></ion-icon> Let's Chat</button>
+            </a>
+        </div>
+        <!-- <img src="assets/img/" class="colors"> -->
+        <img src="assets/img/profile-img.png" class ="men">
+        <ul class="sci">
+            <li><a href="https://www.facebook.com/people/Back-to-Ai/100085690076396/"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="https://www.instagram.com/backtoai"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href=""><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="https://www.linkedin.com/company/back-to-ai"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+        <div class="daynight">
+            <ion-icon name="moon-outline"></ion-icon>
+            <ion-icon name="sunny-outline"></ion-icon>
+        </div>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        let banner = document.querySelector('.banner');
+        let daynight = document.querySelector('.daynight');
+        daynight.onclick = function(){
+            banner.classList.toggle('night')
+        }
+    </script>
+    <script>
+        let typingText = new Typed('#text', {
+            strings: ["AbdulRehman", "Software Engineer", "Developer", "Freelancer", "AI Expert", "Content Creator"],
+            typeSpeed: 100,
+            backSpeed: 50,
+            backDelay: 1000,
+            loop: true
+        });
+    </script>
+</body>
+</html>

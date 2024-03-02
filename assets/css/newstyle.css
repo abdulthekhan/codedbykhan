@@ -1,0 +1,853 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "open sans" ,"sans-serif";
+}
+
+
+
+.banner
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px;
+    background: white;
+    transition: 0.5s;
+}
+
+
+.banner.night
+{
+    background: #333;
+}
+
+header
+{
+    position: absolute;
+    top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    left: 0;
+    width: 100%;
+    padding: 20px , 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); /* Add a text shadow */
+    /*-webkit-text-stroke: 0.5px black;  Add a black border around letters */
+    }
+
+
+header .logo
+{
+    color: #333;
+    font-size: 2em;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.5;
+}
+
+header .logo span
+{
+    color: #149ddd;
+}
+
+header ul
+{
+    display: flex;
+    gap: 40px;
+}
+
+header ul li
+{
+    list-style: none;
+}
+
+header ul li a
+{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: #333;
+    transition: 0.5;
+}
+
+header ul li a.active {
+    font-weight: bold;
+    color: #149ddd; /* Example color for active link */
+}
+
+
+.content
+{
+    position: relative;
+    max-width: 700px;
+    z-index: 10;
+}
+
+.content h3
+{
+    font-size: 2em;
+    color: #333;
+    font-weight: 200;
+    transition: 0.5;
+}
+
+.content h2
+{
+    font-size: 3em;
+    color: #333;
+    font-weight: 700;
+    transition: 0.5;
+}
+
+.content h2 span
+{
+    color: #149ddd;
+}
+
+.content p
+{
+    font-size: 1.2em;
+    color: #666;
+    margin: 10px, 0;
+    transition: 0.5;
+}
+
+.content a {
+  text-decoration: none; /* Remove underline styling */
+}
+
+.content button
+{
+    position: relative;
+    background: #149ddd;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 15px 35px;
+    font-size: 1.25em;
+    letter-spacing: 0.05em;
+    margin-right: 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5;
+
+}
+
+.content button.chat
+{
+    background: transparent;
+    color: #333;
+}
+
+.content button.chat ion-icon
+{
+    position: relative;
+    top: 5px;
+    font-size: 1.5em;
+    color: #149ddd;
+}
+.sci
+{
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.sci li
+{
+    list-style: none;
+}
+
+.sci li a
+{
+    text-decoration: none;
+    font-size: 1.75em;
+    color: #333;
+}
+
+.sci li a:hover
+{
+    color: #149ddd;
+}
+
+.daynight
+{
+    position: absolute;
+    left: 50%;
+    transition: translateX(-50%);
+    bottom: 25px;
+    width: 60px;
+    height: 60px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    color: #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 2em;
+}
+
+.banner.night .daynight
+ {
+    background: #fff;
+    color: #333;
+}
+
+.daynight ion-icon:nth-child(2),
+.banner.night .daynight ion-icon:nth-child(1)
+
+{
+    display: none;
+}
+
+.banner.night .daynight ion-icon:nth-child(2)
+{
+    display: block;
+}
+
+
+.banner.night header .logo,
+.banner.night header ul li a,
+.banner.night .content h2,
+.banner.night .content h3,
+.banner.night .content p,
+.banner.night .content button.chat,
+.banner.night .sci li a
+{
+    color: #fff;
+
+}
+
+.banner.night .sci li a:hover
+{
+    color: #149ddd;
+}
+
+.colors
+{
+    position: absolute;
+    right: 0;
+    max-width: 800px;
+    
+}
+
+.men
+{
+    position: absolute;
+    right: 100px;
+    bottom: 10;
+    max-height: 75vh;
+    animation: animateMen 5s ease-in-out infinite;
+}
+@keyframes animateMen{
+    0%,100%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(-20px);
+    }
+    
+}
+
+/* ==========================About=======================================*/
+
+.additional-info {
+    position: absolute;
+    right: 10%;
+    background-color: #f9f9f9; /* Adding a light background color */
+    padding: 30px; /* Adding padding for spacing */
+    border-radius: 8px; /* Adding border radius for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding a subtle box shadow */
+}
+
+.info-item {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px; /* Adding margin to separate label and content */
+}
+
+.labels {
+    font-weight: bold;
+    font-size: 1.2em; /* Adjusting label font size */
+    color: #333; /* Adjusting label color */
+    margin-right: 5px;
+}
+
+.contents {
+    font-size: 1.1em; /* Adjusting content font size */
+    color: #555; /* Adjusting content color */
+    margin-bottom: 10px; /* Adding margin for spacing */
+}
+
+.info-item .contents a {
+    color: #555;; /* Adjusting link color */
+    text-decoration: none; /* Removing default underline */
+    transition: color 0.3s ease; /* Adding transition for smoother hover effect */
+}
+
+.info-item:hover {
+    color: #0c7abf; /* Changing link color on hover */
+    -webkit-text-stroke: 0.5px black; /* Add a black border around letters */
+    font-weight: bold; /* Making content bold on hover */
+    animation: pulse 0.5s infinite alternate; /* Adding pulse animation on hover */
+}
+
+.info-item a:hover {
+    color: #0c7abf; /* Changing link color on hover */
+}
+
+.info-item:hover .contents {
+    color: #149ddd; /* Adjusting content color on hover */
+    
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+
+.facts {
+    text-align: center; /* Center the content */
+    margin-top: 10px; /* Adjust spacing from the banner */
+    padding: 0 50px; /* Add padding on both sides */
+}
+
+.facts h2 {
+    font-size: 3em; /* Adjust font size */
+    font-weight: 700; /* Adjust font weight */
+    color: #333; /* Adjust font color */
+    margin-bottom: 10px; /* Adjust spacing */
+}
+
+.facts p 
+{
+    font-size: 1.2em; /* Adjust font size */
+    color: #666; /* Adjust font color */
+    margin-bottom: 15px; /* Adjust spacing */
+
+
+}
+
+.fact-list-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the start of the flex container */
+    flex-wrap: wrap; /* Allow items to wrap */
+    gap: 20px; /* Add space between cards */
+}
+
+.fact-card {
+    width: 170px; /* Set the width of each card */
+    height: 170px; /* Set a fixed height for each card */
+    background-color: #f9f9f9;
+    border-radius: 10px; /* Make edges slightly round */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow to the card */
+    perspective: 1000px; /* Add perspective for 3D effect */
+    position: relative; /* Ensure the card's position is relative */
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease; /* Add transition for transform property */
+    backface-visibility: hidden; /* Hide the backface of the card */
+}
+
+.fact-card:hover .card-front {
+    transform: rotateY(-180deg); /* Rotate the front of the card when hovered */
+}
+
+.fact-card:hover .card-back {
+    transform: rotateY(0deg); /* Rotate the back of the card when hovered */
+}
+
+.card-back {
+    transform: rotateY(180deg); /* Initially hide the back of the card */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-back .fact-text {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px;
+    -webkit-text-stroke: 0.5px black; /* Add a black border around letters */
+}
+
+/* Additional styling for ion-icon */
+.card-front ion-icon {
+    font-size: 70px;
+    padding-top: 30%; /* Center the ion-icon */
+}
+
+/* Different colors for each icon */
+.fact-card:nth-child(1) .card-front ion-icon {
+    color: #FFD700; /* Gold */
+}
+
+.fact-card:nth-child(2) .card-front ion-icon {
+    color: #FF4500; /* Orange Red */
+}
+
+.fact-card:nth-child(3) .card-front ion-icon {
+    color: #4169E1; /* Royal Blue */
+}
+
+.fact-card:nth-child(4) .card-front ion-icon {
+    color: #228B22; /* Forest Green */
+}
+
+
+/* Different colors for each icon */
+.fact-card:nth-child(1) .card-back .fact-text {
+    color: #FFD700; /* Gold */
+}
+
+.fact-card:nth-child(2) .card-back .fact-text {
+    color: #FF4500; /* Orange Red */
+}
+
+.fact-card:nth-child(3) .card-back .fact-text {
+    color: #4169E1; /* Royal Blue */
+}
+
+.fact-card:nth-child(4) .card-back .fact-text {
+    color: #228B22; /* Forest Green */
+}
+
+.skills {
+    text-align: center; /* Center the content */
+    margin-top: 50px; /* Adjust spacing from the banner */
+    padding: 0 50px; /* Add padding on both sides */
+}
+
+.skills h2 {
+    font-size: 3em; /* Adjust font size */
+    font-weight: 700; /* Adjust font weight */
+    color: #333; /* Adjust font color */
+    margin-bottom: 10px; /* Adjust spacing */
+}
+
+.skills p 
+{
+    font-size: 1.2em; /* Adjust font size */
+    color: #666; /* Adjust font color */
+    margin-bottom: 15px; /* Adjust spacing */
+}
+
+.skill-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; /* Add transition effect */
+}
+
+.skill-card:hover {
+    transform: translateY(-5px); /* Move the card upward on hover */
+}
+
+.skill-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.skill-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.skill-name {
+    color: #333;
+    font-size: 1em;
+    font-weight: bold;
+    width: 250px; /* Fixed width for the skill name container */
+}
+
+.progress-container {
+    flex: 1;
+    margin-left: 0px; /* Adjust spacing between label and progress bar */
+    
+}
+
+.skill-progress {
+    margin-bottom: 15px;
+}
+
+.animated-progress {
+    width: 100%;
+    height: 18px;
+    border-radius: 10px;
+    border: 1.5px solid black;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .animated-progress span {
+    height: 100%;
+    display: block;
+    width: 0;
+    color: rgb(255, 251, 251);
+    line-height: 100%;
+    position: absolute;
+    text-align: end;
+    padding-top: 2px;
+    padding-right: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    -webkit-text-stroke: 1 px black; /* Add a black border around letters */
+    
+  }
+  
+  .progress-blue span {
+    background-color: blue;
+  }
+  .progress-green span {
+    background-color: green;
+  }
+  .progress-purple span {
+    background-color: indigo;
+  }
+  .progress-red span {
+    background-color: red;
+  }
+  .progress-brown span {
+    background-color: burlywood;
+  }
+  .progress-yellow span {
+    background-color: #FFD700;
+  }
+/* ==========================Resume=======================================*/
+
+.resume .resume-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #050d18;
+    text-decoration: underline; /* Add underline */
+    text-decoration-color: #1f5297; /* Set underline color */
+  }
+
+  .resume .section-title h2 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: underline; /* Add underline */
+    text-decoration-color: #149ddd; /* Set underline color */
+  }
+  
+  .resume .resume-item {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid #1f5297;
+    position: relative;
+  }
+  
+  .resume .resume-item h4 {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #050d18;
+    margin-bottom: 10px;
+  }
+  
+  .resume .resume-item h5 {
+    font-size: 16px;
+    background: #e4edf9;
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .resume .resume-item ul {
+    padding-left: 20px;
+  }
+  
+  .resume .resume-item ul li {
+    padding-bottom: 10px;
+  }
+  
+  .resume .resume-item:last-child {
+    padding-bottom: 0;
+  }
+  
+  .resume .resume-item::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -9px;
+    top: 0;
+    background: #fff;
+    border: 2px solid #1f5297;
+  }
+
+  /*==============================Portfolio==================================*/
+
+  .portfolio-title {
+    font-size: 3em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: underline; /* Add underline */
+    text-decoration-color: #149ddd; /* Set underline color */ 
+  }
+
+  .portfolio-description {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .portfolio .portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute items evenly along the row */
+  }
+  
+  .portfolio .portfolio-item {
+    flex: 0 0 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+    margin-bottom: 30px;
+  }
+  
+  .portfolio .portfolio-wrap img {
+    max-width: 100%; /* Ensure images don't exceed the container width */
+    border: 1px solid #ccc; /* Add border to each image */
+    border-radius: 5px; /* Optional: Add border radius for rounded corners */
+    transition: transform 0.3s ease; /* Add transition effect for smooth scaling */
+}
+
+.portfolio .portfolio-wrap img:hover {
+    transform: scale(1.1); /* Scale up the image on hover */
+}
+  
+  .portfolio #portfolio-flters {
+    padding: 0;
+    margin: 0 auto 35px auto;
+    list-style: none;
+    text-align: center;
+    background: #fff;
+    border-radius: 50px;
+    padding: 2px 15px;
+  }
+  
+  .portfolio #portfolio-flters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 15px 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #272829;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #050d18;
+    border-radius: 25px;
+  }
+  
+  .portfolio #portfolio-flters li:hover,
+  .portfolio #portfolio-flters li.filter-active {
+    color: #149ddd;
+  }
+  
+  .portfolio #portfolio-flters li:last-child {
+    margin-right: 0;
+  }
+  
+  .portfolio .portfolio-wrap {
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .portfolio .portfolio-wrap::before {
+    content: "";
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+    opacity: 0;
+  }
+
+  .portfolio .portfolio-wrap .portfolio-links {
+    opacity: 1;
+    left: 0;
+    right: 0;
+    bottom: -60px;
+    z-index: 3;
+    position: absolute;
+    transition: all ease-in-out 0.3s;
+    display: flex;
+    justify-content: center;
+  }
+
+  .portfolio .portfolio-wrap .portfolio-links a {
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+    background: rgba(20, 157, 221, 0.75);
+    transition: 0.3s;
+    width: 50%;
+  }
+
+  .portfolio .portfolio-wrap .portfolio-links a:hover {
+    background: rgba(20, 157, 221, 0.95);
+  }
+
+  .portfolio .portfolio-wrap .portfolio-links a+a {
+    border-left: 1px solid #37b3ed;
+  }
+
+  .portfolio .portfolio-wrap:hover::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+  }
+
+  .portfolio .portfolio-wrap:hover .portfolio-links {
+    opacity: 1;
+    bottom: 0;
+  }
+
+  .portfolio .portfolio-item:hover .portfolio-wrap img {
+    transform: scale(1.1); /* Scale up the image on hover */
+}
+
+/*=============================Services===================================*/
+.services {
+    width: 100%;
+    padding: 80px 0;
+  }
+  
+  .services .section-heading {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .services .section-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #050d18;
+    text-decoration: underline;
+    text-decoration-color: #1f5297;
+  }
+  
+  .services .section-description {
+    font-size: 20px;
+    color: #666;
+    text-align: center;
+  }
+  
+  .services .card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .services .service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .services .title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #050d18;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .services .service-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .services .icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #149ddd;
+  }
+  
+  .services .icon-box {
+    font-size: 40px;
+  }
+  
+  .services .title a {
+    color: #343a40;
+    text-decoration: none;
+  }
+  
+  .services .title a:hover {
+    color: #149ddd;
+  }
+  
+  .services .description {
+    line-height: 24px;
+    font-size: 14px;
+    color: #666;
+  }

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AbdulRehman Khan</title>
+    <link rel="stylesheet" href="assets/css/newstyle.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+</head>
+<body>
+    <section class="banner">
+        <header>
+            <a href="/index.html" class="logo"><span>AbdulRehman</span> Khan</a>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/resume.html">Resume</a></li>
+                <li><a class="nav-link scrollto active" href="/portfolio.html">Portfolio</a></li>
+                <li><a href="/services.html">Services</a></li>
+            </ul>
+        </header>
+        <section id="portfolio" class="portfolio section-bg">
+            <div class="container">
+              <div class="section-title">
+                <h2 class="portfolio-title">Portfolio and Achievements</h2>
+                <p class="portfolio-description">Here are my Projects and Achievements </p>
+              </div>
+              <div class="row" data-aos="fade-up">
+                <div class="col-lg-12 d-flex justify-content-center">
+                  <ul id="portfolio-flters">
+                    <li data-filter="*" class="filter-active">All</li>
+                    <li data-filter=".filter-websites">Websites</li>
+                    <li data-filter=".filter-platforms">Platforms</li>
+                    <li data-filter=".filter-achievements">Achievements</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+              <!-- Your portfolio items go here -->
+
+              <div class="col-lg-4 col-md-6 portfolio-item filter-websites">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/Internbano.PNG" class="img-fluid" alt="">
+                    <div class="portfolio-links">
+                      <a href="assets/img/portfolio/Internbano.PNG" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Bits N Bytes Education LMS"><i class="bx bx-plus"></i></a>
+                      <a href="assets/img/portfolio/Internbano.PNG" title="More Details"><i class="bx bx-link"></i></a>
+                    </div>
+                  </div>
+              </div>
+        
+                <div class="col-lg-4 col-md-6 portfolio-item filter-platforms">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/bitsnbytes.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-links">
+                      <a href="assets/img/portfolio/bitsnbytes.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Internbano"><i class="bx bx-plus"></i></a>
+                      <a href="assets/img/portfolio/bitsnbytes.jpg" title="More Details"><i class="bx bx-link"></i></a>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="col-lg-4 col-md-6 portfolio-item filter-achievements">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/digital.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-links">
+                      <a href="assets/img/portfolio/digital.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Infinipays Digital Wallet"><i class="bx bx-plus"></i></a>
+                      <a href="assets/img/portfolio/digital.jpg" title="More Details"><i class="bx bx-link"></i></a>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="col-lg-4 col-md-6 portfolio-item filter-websites">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/calculator.PNG" class="img-fluid" alt="">
+                    <div class="portfolio-links">
+                      <a href="assets/img/portfolio/calculator.PNG" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Holistically Measure Analyze Forecast Honestly Calculator"><i class="bx bx-plus"></i></a>
+                      <a href="assets/img/portfolio/calculator.PNG" title="More Details"><i class="bx bx-link"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-platforms">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/ai.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-links">
+                      <a href="assets/img/portfolio/ai.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Internbano"><i class="bx bx-plus"></i></a>
+                      <a href="assets/img/portfolio/ai.jpg" title="More Details"><i class="bx bx-link"></i></a>
+                    </div>
+                  </div>
+                </div>
+        
+              </div>
+        
+            </div>
+          </section>
+          <!-- End Portfolio Section -->
+    </section>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#portfolio-flters li").click(function(){
+          $("#portfolio-flters li").removeClass("filter-active");
+          $(this).addClass("filter-active");
+  
+          var selectedFilter = $(this).data("filter");
+          if(selectedFilter == "*") {
+            $(".portfolio-item").show();
+          } else {
+            $(".portfolio-item").hide();
+            $(".portfolio-item" + selectedFilter).show();
+          }
+        });
+      });
+    </script>
+</body>
+</html>
